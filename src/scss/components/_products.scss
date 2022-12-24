@@ -8,6 +8,11 @@
     align-items: center;
     justify-content: space-between;
 
+    @include desktop {
+      display: flex;
+      flex-direction: column;
+    }
+
     &::before {
       content: "";
       display: block;
@@ -43,7 +48,7 @@
 
   &__title {
     margin: 0 auto;
-    max-width: 785px;
+    max-width: 610px;
     font-weight: 400;
     font-size: 65px;
     line-height: 73px;
@@ -52,7 +57,7 @@
     text-transform: uppercase;
     color: var(--dark-color);
 
-    @include tablet {
+    @include desktop {
       padding: 40px 0;
     }
 
@@ -89,7 +94,7 @@
       }
     }
 
-    @include tablet {
+    @include big-desktop {
       display: none;
     }
   }
@@ -124,6 +129,11 @@
     padding: 0 20px;
     padding-bottom: 20px;
     gap: 26px;
+
+    @include big-desktop {
+      justify-content: space-evenly;
+    }
+
   }
 
   &__cover {
